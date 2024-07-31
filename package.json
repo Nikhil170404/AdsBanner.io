@@ -6,12 +6,12 @@
   "scripts": {
     "dev": "next dev",
     "lint": "next lint",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "next start",
+    "build": "next build",
+    "predeploy": "next build && next export",
+    "deploy": "gh-pages -d out",
+    "test": "next test",
+    "eject": "next eject"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.34",
