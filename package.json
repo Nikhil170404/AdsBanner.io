@@ -3,16 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://Nikhil170404.github.io/AdsBanner.io",
-  "scripts": {
-    "dev": "next dev",
-    "lint": "next lint",
-    "start": "next start",
-    "build": "next build",
-    "predeploy": "next build && next export",
-    "deploy": "gh-pages -d out",
-    "test": "next test",
-    "eject": "next eject"
-  },
+ "scripts": {
+  "dev": "next dev",
+  "lint": "next lint",
+  "start": "next start",
+  "build": "next build",
+  "predeploy": "next build",
+  "deploy": "gh-pages -d out",
+  "test": "next test",
+  "eject": "next eject"
+}
+,
   "dependencies": {
     "@types/styled-components": "^5.1.34",
     "axios": "^1.7.2",
@@ -26,7 +27,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
+    "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.5",
     "gh-pages": "^6.1.1",
     "postcss": "^8",
