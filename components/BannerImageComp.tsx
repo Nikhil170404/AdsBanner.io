@@ -1,17 +1,18 @@
-"use client";
-import styled from 'styled-components';
 import React from 'react';
+import styled from 'styled-components';
 
 interface BannerProps {
   title: string;
   description: string;
   cta: string;
   image: string;
+  fontColor: string;
   onEdit: () => void;
 }
 
 interface BannerContainerProps {
   image: string;
+  fontColor: string;  // Add fontColor here
 }
 
 const BannerContainer = styled.div<BannerContainerProps>`
@@ -19,7 +20,7 @@ const BannerContainer = styled.div<BannerContainerProps>`
   background-size: cover;
   border-radius: 12px;
   padding: 20px;
-  color: #fff;
+  color: ${(props) => props.fontColor};  // Use fontColor here
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -65,8 +66,8 @@ const CTAButton = styled.button`
   }
 `;
 
-const BannerImageComp: React.FC<BannerProps> = ({ title, description, cta, image, onEdit }) => (
-  <BannerContainer image={image}>
+const BannerImageComp: React.FC<BannerProps> = ({ title, description, cta, image, fontColor, onEdit }) => (
+  <BannerContainer image={image} fontColor={fontColor}>
     <EditIcon onClick={onEdit} aria-label="Edit Banner">✏️</EditIcon>
     <div>
       <h2>{title}</h2>
